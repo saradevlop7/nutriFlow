@@ -35,7 +35,7 @@ export function displayRecipes(recipes, container) {
     // ❤️ Favoris
     const favBtn = card.querySelector('.fav-btn');
     favBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); // باش ما تفتحش المودال
+      e.stopPropagation();    
       toggleFavorite(recipe.id);
 
       if (favBtn.textContent === '❤️') {
