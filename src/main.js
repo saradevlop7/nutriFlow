@@ -8,22 +8,28 @@ const closeModal = document.getElementById('close-modal');
 const modal = document.getElementById('recipe-modal');
 
 let allRecipes = [];
+let status = 'idle'; // idle | loading | success | error
 
 async function init() {
   try {
+    status = 'loading';
     showLoader(recipeList);
 
     allRecipes = await getAllRecipes();
 
     hideLoader(recipeList);
+    status = 'success';
 
     displayRecipes(allRecipes, recipeList);
 
   } catch (error) {
     hideLoader(recipeList);
+    status = 'error';
     recipeList.innerHTML = "<p>Erreur lors du chargement des recettes.</p>";
     console.error(error);
   }
+
+  console.log("Status actuel :", status);
 }
 
 function filterRecipes(searchTerm) {

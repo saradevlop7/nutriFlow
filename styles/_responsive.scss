@@ -1,0 +1,30 @@
+@import "variables";
+
+/* Navigation */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: $purple;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .recipe-card {
+    padding: 20px;
+  }
+
+  .welcome-banner {
+    margin: 20px;
+  }
+}

@@ -45,6 +45,7 @@ export function displayRecipes(recipes, container) {
       }
     });
 
+
     // 🟢 Ouvrir modal
     card.addEventListener('click', () => {
       openModal(recipe);

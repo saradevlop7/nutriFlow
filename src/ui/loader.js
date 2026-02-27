@@ -1,7 +1,11 @@
-// src/ui/loader.js
 
 export function showLoader(container) {
-  container.innerHTML = '<div class="loader">Chargement des recettes...</div>';
+  const loader = document.createElement('div');
+  loader.className = 'loader';
+  loader.textContent = '⏳ Chargement des recettes...';
+
+  container.innerHTML = '';
+  container.appendChild(loader);
 }
 
 export function hideLoader(container) {
