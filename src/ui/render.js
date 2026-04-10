@@ -14,7 +14,14 @@ export function displayRecipes(recipes, container) {
 
   const favorites = getFavorites();
 
-  recipes.forEach(recipe => {
+  //recipes.forEach(recipe => {
+    for()
+
+
+  return caloriesPerServing
+
+      
+
     const card = document.createElement('div');
     card.className = 'recipe-card';
 
